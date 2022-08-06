@@ -27,7 +27,11 @@ public class Gart {
         Edge.get("https://www.wikipedia.org/");
         Edge.manage().window().maximize();
         Edge.findElement(By.id("searchInput")).sendKeys("Welcome Da Ambi");
-        Edge.findElement(By.className("pure-button pure-button-primary-progressive")).click();
+        Edge.findElement(By.xpath("//*[@id=\"search-form\"]/fieldset/button")).click();
+        Edge.findElement(By.xpath("//*[@id=\"mw-search-DYM-suggestion\"]")).click();
+        Edge.findElement(By.id("ooui-php-1")).clear();
+        Edge.findElement(By.cssSelector("#ooui-php-1")).sendKeys("Motorola");
+
 
 
     }
